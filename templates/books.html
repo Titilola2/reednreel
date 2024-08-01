@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+</head>
+<link rel="stylesheet" href="../static/dashboard.css">
+<body>
+    <h1>Books</h1>
+    <form method="post">
+        <input type="text" name="query_books" placeholder="Search for books" value="{{ query_books }}" class="search-bar">
+        <input type="submit" value="Search">
+    </form>
+    <div class="picks">
+      {% for book in books %}
+        
+          
+          {% if book.cover_id %}
+          <div class="preview-card">
+            <img src="https://covers.openlibrary.org/b/id/{{ book.cover_id }}-M.jpg" alt="{{ book.title }} cover">
+            <h4>{{ book.title }}</h4>
+          {% else %}
+            <p>No cover image available</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+</head>
+<body>
+  <h1>Books</h1>
+  <ul>
+    {% for book in books %}
+      <li>
+        <h2>{{ book.title }}</h2>
+        {% if book.cover_id %}
+          <img src="https://covers.openlibrary.org/b/id/{{ book.cover_id }}-M.jpg" alt="{{ book.title }} cover">
+        {% else %}
+          <p>No cover image available</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html> -->

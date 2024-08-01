@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="../static/images/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/dashboard.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Left Aside -->
+      <aside>
+        <!-- Hamburger -->
+         <div class="hamburger">
+            <img src="../static/images/menu.png" alt="">
+         </div>
+  
+        <!-- reednreels logo -->
+        <div class="logo">
+          <img src="../static/Images/logo.svg" alt="logo">
+          <p>
+            READnREELS
+          </p>
+        </div>
+
+        <!-- Navigation Panel-->
+        <nav>
+          <a class="nav-links" href="">
+            <img src="../static/images/home (1).png" alt="">
+            <p>Home</p>
+          </a>
+          <hr>
+          <a class="nav-links">
+            <img src="../static/images/documentary.png" alt="">
+            <p>Explore</p>
+          </a>
+  
+          <a class="nav-links">
+            <img src="../static/images/badge.png" alt="">
+            <p>Top Picks</p>
+          </a>
+  
+          <a class="nav-links">
+            <img src="../static/images/document.png" alt="">
+            <p>My List</p>
+          </a>
+          <hr>
+          <a class="nav-links">
+            <img src="../static/images/settings.png" alt="">
+            <p>Settings</p>
+          </a>
+          <a class="nav-links" style="color: black;text-decoration: none;" href="https://drive.google.com/file/d/10lHeCRMTjM9KcKwUTA_hvgTE2YS0zsHD/view?usp=drive_link">Download now</a>
+        </nav>
+      </aside>
+
+      <!-- Welcome and Search Bar -->
+        <!-- User Name -->
+        <div class="welcome-text">
+          Welcome <span>
+            {{user_name}}
+          </span>
+          <img src="../static/images/wave.png" alt="" />
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <div >
+            <form action="{{ url_for('search') }}" method="get">
+              <input type="text" name="query" placeholder="Search for a movie" class="search-bar">
+              <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Right Aside -->
+    <aside class="right-aside">
+      <h3>Today's Pick For You</h3>
+
+      <!-- Pick Preview -->
+      <div>
+        <img
+          class="pick-preview"
+          src="../static/images/Avengers_ Infinity War  Posters.jpg"
+          alt=""
+        />
+
+        <h4>Avengers Infinity War</h4>
+        <div class="yr-rating">
+          <h5>2020</h5>
+          <img class="rating" src="../static/images/rating-50.png" alt="" />
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Explore Top Picks -->
+      <section class="explore">
+        <h3>Top Picks <span>view more</span></h3>
+        <div class="picks">
+          <!-- Card Preview -->
+          {% for movie in movies %}
+          <div class="preview-card">
+            <img
+              class="picks-img"
+              src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }} poster"
+            />
+            <div>
+              <p class="">{{ movie.title }}</p>
+              
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+          <!-- books -->
+          <section class="books">
+            <h1>READ YOUR FAVOURITE BOOKS</h1>
+            <a href="{{url_for('books')}}" class="btn">GET STARTED </a>
+            </section>
+
+    <!-- Footer -->
+    <footer></footer>
+  </body>
+</html>

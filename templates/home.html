@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popular Movies</title>
+</head>
+<body>
+  <h1>Popular Movies</h1>
+  <form action="{{ url_for('search') }}" method="get">
+    <input type="text" name="query" placeholder="Search for a movie">
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    {% for movie in movies %}
+      <li>
+        <h2>{{ movie.title }}</h2>
+        <a href="{{url_for('youtube.com')}}"><img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }} poster"></a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+body{
+  position: relative;
+}
+.btn{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #0B4176;
+  padding: 10px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 900;
+  transition: 0.2s ease;
+  width: 25%;
+  height: 10vh;
+  text-decoration: none;
+  font-size: 4vmin;
+  color: whitesmoke;
+  text-align: center;
+}
+.books h1{
+  color: #0B4176;
+  font-family: 'Courier New', Courier, monospace;
+}
+.books{
+  margin-top: 20vh;
+  width: 70%;
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Left Aside */
+header>aside{
+  position: fixed;
+  background: #F4F6F9;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  padding: 1.5rem 1rem;
+}
+
+/* Hamburger */
+.hamburger>img{
+  width: 1rem;
+  display: none;
+}
+
+/* ReednReels Logo */
+header>aside>.logo{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0E2944;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.logo>img{
+  width: 2.2rem;
+}
+
+/* Navigation Panel*/
+aside>nav{
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+}
+
+aside>nav>.nav-links{
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem;
+  color: #0E2944;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+aside>nav>.nav-links>img{
+  width: 1.5rem;
+}
+
+aside>nav>a.nav-links:hover{
+  background-color: white;
+}
+
+a.nav-links{
+  text-decoration: none;
+}
+
+aside>nav>hr{
+  border: 1px solid #0B4176;
+}
+
+/* Welcome and Search Bar */
+header{
+  margin-left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+  height: 6rem;
+  padding: 0 2rem;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.434);
+}
+
+header .head-bar{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header .welcome-text{
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #0E2944;
+  gap: 0.4rem;
+}
+
+.welcome-text>span{
+  font-size: 1.6rem;
+  color: #0B4176;
+}
+
+.welcome-text>img{
+  width: 1rem;
+}
+
+/* Search Bar */
+.search-bar > input{
+  padding: 0.5rem 1rem;
+  width: 20rem;
+  border: none;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.434);
+  border-radius: 4rem;
+}
+
+/* Right aside */
+.right-aside{
+  position: fixed;
+  width: 20%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F4F6F9;
+  padding: 2.2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-align: center; 
+  align-items: center;
+}
+
+.right-aside>h3{
+  color: #0B4176 ;
+}
+
+/* Pick Preview */
+.right-aside>div>.pick-preview{
+  width: 100%;
+  height: 18rem;
+  border: 10px solid #fff;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.434);
+}
+
+.right-aside>div>h4{
+  text-align: left;
+  color: #0B4176;
+  margin-bottom: 0.5rem;
+}
+
+.yr-rating{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating{
+  width: 4rem;
+}
+
+/* Main Section */
+main{
+  margin-left: 15%;
+  margin-right: 20%;
+  padding: 2rem;
+  background-color: #efefd0a6;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.explore{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ gap: 0.5rem;
+
+}
+
+.explore h3{
+  color: #0b4176;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #0E2944;
+}
+
+.explore h3 span{
+  float: right;
+  font-size: 1rem;
+  color: #0E2944;
+  text-decoration: underline;
+  cursor: pointer;
+  height: max-content;
+}
+
+.picks{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: max-content;
+}
+
+.pick-preview div{  
+ float: left;
+}
+
+.preview-card{
+ background-color: #fff;
+ width: 9rem;
+ border-radius: 4px;
+ padding: 0.5rem 0;
+ align-items: center;
+ justify-content: center;
+ display: flex;
+ gap: 0.8rem;
+ flex-direction: column;
+}
+
+.picks > div > .picks-img{
+  width: 8rem;
+  height: 12rem;
+  border-radius: 4px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.preview-card > div{
+  width: 8rem;
+}
+
+.item-title{
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+
+.author{
+  font-size: 0.6rem;
+  color: #d2691ed1;
+}
+
+.author span{
+  margin-left: 0.2rem;
+  color:  #0e29446c;
+}
+
+@media (max-width: 1100px) {
+  header,
+  main{
+    padding: 1rem;
+  }
+
+  header>aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo>img{
+    width: 3rem;
+  }
+
+  .logo>p{
+    display: none;
+  }
+
+  .nav-links>p{
+    display: none;
+  }
+
+  .search-bar>input{
+    width: 12rem;
+  }
+
+  .picks{
+    gap: 1rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 650px) {
+  header,
+  main{
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  header>aside{
+    width: 10%;
+  }
+
+  .logo>p{
+    display: none;
+  }
+
+  .search-bar>input{
+    width: 14rem;
+  }
+
+  .right-aside{
+    display: none;
+  }
+
+  .picks{
+    gap: 0.8rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 450px) {
+  header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  header>aside{
+    position: relative;
+    background-color: #fff;
+    width: auto;
+  }
+
+  .hamburger>img{
+    display: block;
+  }
+
+  header>aside>.logo{
+    display: none;
+  }
+
+  header>aside>nav{
+    display: none;
+  }
+
+  header{
+    margin: 0;
+    width: 100%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.434);
+  }
+
+  .welcome-text{
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .welcome-text>p{
+    display: none;
+  }
+
+  /* Search Bar */
+  .search-bar > input{
+    width: 8rem;
+  }
+
+  .right-aside{
+    display: none;
+  }
+
+  main{
+    margin: 0;
+    width: 100%;
+    padding: 2.5rem;
+  }
+
+  .picks{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header{
+    padding: 2rem 1rem;
+  }
+
+  .search-bar>input{
+    width: 5rem;
+  }
+
+  main{
+    padding: 2rem 1rem;
+  }
+
+  .picks{
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .preview-card{
+    margin-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 319px) {
+  body{
+    display: none;
+  }
+}

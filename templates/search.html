@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/search.css">
+</head>
+<body>
+    <section class="header">
+        <h1>Search Results for "{{ query }}"</h1>
+        <div class="search-bar">
+            
+        </div>
+    </section>
+    <hr>
+<!-- content img2 -->
+    <section class="contents">
+        {% for result in results %}
+        <div class="content-item">
+            <img src="https://image.tmdb.org/t/p/w500{{ result.poster_path }}" alt="{{ result.title }} poster">
+            <div class="details">
+                <h2>{{ result.title }}</h2>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>
